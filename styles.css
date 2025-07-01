@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color: #1e1e1e; /* Dark container */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.5); /* Purple shadow */
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #8a2be2; /* Purple border */
+}
+
+h1 {
+    color: #9c27b0; /* Purple heading */
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(156, 39, 176, 0.5);
+}
+
+.stopwatch {
+    margin-bottom: 30px;
+}
+
+.display {
+    background-color: #000000; /* Black display background */
+    border-radius: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #bb86fc; /* Light purple text */
+    border: 1px solid #6a1b9a; /* Darker purple border */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #6a1b9a; /* Dark purple */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+    border: 1px solid #9c27b0;
+}
+
+.btn:hover {
+    background-color: #9c27b0; /* Lighter purple on hover */
+    box-shadow: 0 0 15px rgba(156, 39, 176, 0.7);
+    transform: translateY(-2px);
+}
+
+#startBtn {
+    background-color: #4a148c; /* Deep purple */
+}
+
+#startBtn:hover {
+    background-color: #7b1fa2;
+}
+
+#pauseBtn {
+    background-color: #7b1fa2; /* Medium purple */
+}
+
+#pauseBtn:hover {
+    background-color: #9c27b0;
+}
+
+#resetBtn {
+    background-color: #6a1b9a; /* Dark purple */
+}
+
+#resetBtn:hover {
+    background-color: #8e24aa;
+}
+
+#lapBtn {
+    background-color: #8e24aa; /* Light purple */
+}
+
+#lapBtn:hover {
+    background-color: #ab47bc;
+}
+
+.laps {
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #121212; /* Dark background */
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #6a1b9a; /* Purple border */
+}
+
+.laps h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #bb86fc; /* Light purple */
+}
+
+#lapsList {
+    list-style-type: none;
+}
+
+#lapsList li {
+    padding: 8px;
+    border-bottom: 1px solid #6a1b9a; /* Purple border */
+    display: flex;
+    justify-content: space-between;
+    color: #e1bee7; /* Very light purple */
+}
+
+#lapsList li:nth-child(odd) {
+    background-color: #1a1a1a; /* Slightly lighter than background */
+}
+
+#lapsList li:nth-child(even) {
+    background-color: #212121; /* Slightly lighter than odd rows */
+}
+
+/* Custom scrollbar for the laps section */
+.laps::-webkit-scrollbar {
+    width: 8px;
+}
+
+.laps::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.laps::-webkit-scrollbar-thumb {
+    background: #6a1b9a;
+    border-radius: 4px;
+}
+
+.laps::-webkit-scrollbar-thumb:hover {
+    background: #9c27b0;
+}
+
+@media (max-width: 480px) {
+    .display {
+        font-size: 36px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
